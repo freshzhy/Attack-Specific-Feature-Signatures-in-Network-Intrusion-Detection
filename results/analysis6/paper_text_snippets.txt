@@ -1,0 +1,74 @@
+
+
+======================================================================
+结果文字汇总
+======================================================================
+
+######################################################################
+# JSD 方法学补充段落
+######################################################################
+To quantify flow-level behavioral similarity between source and target attack
+populations, we compute the Jensen–Shannon divergence (JSD) between their
+feature-value distributions. For each of the 40 NetFlow features independently,
+we discretize the pooled source-and-target value range into 50 equal-width bins
+and construct empirical histograms for the source and target samples
+(up to 5,000 attack instances per dataset, drawn via stratified random sampling
+with a fixed seed for reproducibility). Each histogram is smoothed with an
+epsilon term (ε = 10⁻¹⁰) to avoid zero-probability bins, then
+normalized to a valid probability distribution. The per-feature JSD is computed
+as the squared value of the Jensen–Shannon distance (base-2 logarithm,
+bounded in [0, 1]), and the reported JSD is the unweighted mean across the 40
+features (or the source dataset's Top-10 SHAP features, for the restricted
+variant). This univariate, per-feature aggregation approach does not capture
+inter-feature correlations; a multivariate divergence measure (e.g.,
+kernel-based MMD) could provide a complementary perspective but was not
+pursued here, as the univariate JSD already provides a conservative, easily
+interpretable summary of distributional overlap. Source and target sample
+sizes are balanced by capping both at 5,000 instances; datasets with fewer
+than 5,000 attack instances of the relevant class contribute their full
+available sample.
+
+
+######################################################################
+# Jaccard-ΔF1 相关检验结果文字
+######################################################################
+To formally test whether signature overlap predicts transfer performance, we compute the Spearman correlation between cross-dataset Top-10 Jaccard similarity (RQ2) and the directional SHAP-10 transfer gain (Δ F1, analysis 3). Because Jaccard similarity is symmetric (J(A,B) = J(B,A)) while transfer gain is directional (ΔF1(A→B) ≠ ΔF1(B→A)), we report two complementary analyses. Under the direct approach, treating each directional pair against its (necessarily symmetric) Jaccard value, the correlation is ρ = +0.281 (p = 0.2590, n = 18, not significant). Under the symmetrized approach, averaging ΔF1 across both transfer directions for each dataset pair before correlating with Jaccard, the correlation is ρ = +0.395 (p = 0.2934, n = 9, not significant). Neither analysis reaches statistical significance, indicating that the operational recommendation to use Jaccard similarity as a screening heuristic (Section 5.4) is based on descriptive association observed in individual high-transfer pairs (e.g., BoT↔ToN Reconnaissance) rather than a validated predictive relationship, and should be treated as a provisional heuristic pending validation on a larger sample of dataset pairs and attack categories.
+
+######################################################################
+# Table VII 结果摘要文字
+######################################################################
+Table VII reports the complete SHAP-10-Direct results. Across 18
+source–target–class configurations, SHAP-10-Direct significantly
+outperforms Random-10 (source-trained, target-tested) in 0
+configurations (0%) after Holm–Bonferroni
+correction. The median cost of zero-shot transfer relative to target-retrained
+SHAP-10 is Δ F1 = -0.8811.
+
+
+######################################################################
+# Fig.11 图注
+######################################################################
+
+Fig. 11. SHAP-10-Direct zero-shot model transfer results (30-seed repeated
+evaluation). Upper panels: F1 distribution across four conditions (Full-40,
+SHAP-10, SHAP-10-Direct, Random-10) per target dataset. Lower panels: F1 gap
+between SHAP-10-Direct and SHAP-10 (Δ = Direct − SHAP-10; negative
+values indicate the cost of removing target-side retraining). Boxes show
+median and IQR across 30 random train/test splits; whiskers extend to
+1.5×IQR.
+
+
+######################################################################
+# Fig.10 图注（95% CI）
+######################################################################
+
+Fig. 10. Jensen–Shannon divergence of attack flow distributions vs.
+SHAP-10 transfer performance gain (Δ F1 = SHAP-10 − Random-10).
+(a) JSD computed over all 40 features. (b) JSD computed over source Top-10
+SHAP features. Filled markers: Δ F1 significant after Holm–Bonferroni
+correction; open markers: not significant. Dashed line: linear trend with
+95% Bootstrap confidence interval (shaded). Neither panel shows a significant
+Spearman correlation (p > 0.4), indicating that distributional distance in
+feature space does not predict transfer effectiveness.
+
+（对应文件: analysis4_jsd_scatter_95ci.pdf/.png）

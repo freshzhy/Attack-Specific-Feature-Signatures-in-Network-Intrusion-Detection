@@ -1,0 +1,13 @@
+,,,f1,f1,auc_roc,auc_roc
+,,,mean,std,mean,std
+semantic_class,condition,env_same,,,,
+DoS,Full-40,True,0.9438,0.0449,0.998,0.0021
+DoS,Random-10,True,0.9218,0.0559,0.9967,0.0027
+DoS,SHAP-10,False,0.9322,0.0492,0.9966,0.0029
+DoS,SHAP-10,True,0.9248,0.0645,0.9972,0.0022
+DoS,Target-10,True,0.9441,0.0445,0.998,0.0021
+Reconnaissance,Full-40,True,0.9703,0.0045,0.9995,0.0002
+Reconnaissance,Random-10,True,0.8838,0.0815,0.9791,0.0271
+Reconnaissance,SHAP-10,False,0.952,0.0162,0.998,0.0013
+Reconnaissance,SHAP-10,True,0.88,0.0655,0.9874,0.0139
+Reconnaissance,Target-10,True,0.9688,0.0039,0.9995,0.0002

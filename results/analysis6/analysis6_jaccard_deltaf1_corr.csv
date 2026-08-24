@@ -1,0 +1,6 @@
+approach,subset,n_pairs,spearman_rho,p_value,significant
+A_directional_vs_symmetric_jaccard,All,18,0.2808,0.259008,False
+A_directional_vs_symmetric_jaccard,DoS,12,0.1024,0.751447,False
+A_directional_vs_symmetric_jaccard,Reconnaissance,6,0.1195,0.821569,False
+B_symmetric_avg_vs_symmetric_jaccard,All,9,0.3945,0.293382,False
+B_symmetric_avg_vs_symmetric_jaccard,DoS,6,0.0,1.0,False

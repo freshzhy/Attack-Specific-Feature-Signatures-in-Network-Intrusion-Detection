@@ -1,0 +1,10 @@
+semantic_class,pair_set,n_directions,symmetric_delta_f1,jaccard
+DoS,CIC-UNSW,2,0.0112,0.25
+DoS,ToN-UNSW,2,0.008,0.25
+DoS,BoT-UNSW,2,0.0036,0.1111
+DoS,CIC-ToN,2,0.012,0.1111
+DoS,BoT-CIC,2,0.0129,0.1111
+DoS,BoT-ToN,2,-0.0109,0.1111
+Reconnaissance,ToN-UNSW,2,0.0633,0.3333
+Reconnaissance,BoT-UNSW,2,0.0228,0.1111
+Reconnaissance,BoT-ToN,2,0.018,0.4286

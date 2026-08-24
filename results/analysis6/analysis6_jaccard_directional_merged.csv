@@ -1,0 +1,19 @@
+semantic_class,pair,env_same,n_seeds,shap10_mean,shap10_std,shap10_ci95_lo,shap10_ci95_hi,random10_mean,random10_std,delta_mean,cohen_d,wilcoxon_p,wilcoxon_p_corrected,significant_wilcox,significant_corrected,_pair_set,_direction,jaccard,spearman_rho
+DoS,CIC→UNSW,True,30,0.9091,0.0052,0.9075,0.9109,0.8908,0.0124,0.0183,1.9211,0.0,0.0,True,True,"frozenset({'UNSW', 'CIC'})",CIC→UNSW,0.25,0.2962
+DoS,ToN→UNSW,False,30,0.8845,0.0058,0.8826,0.8863,0.8908,0.0124,-0.0063,-0.649,0.975145,1.0,False,False,"frozenset({'ToN', 'UNSW'})",ToN→UNSW,0.25,0.1993
+DoS,BoT→UNSW,False,30,0.8784,0.0065,0.8761,0.8805,0.8908,0.0124,-0.0124,-1.2474,0.99999,1.0,False,False,"frozenset({'BoT', 'UNSW'})",BoT→UNSW,0.1111,0.111
+DoS,UNSW→CIC,True,30,0.9999,0.0001,0.9999,1.0,0.9957,0.0109,0.0042,0.548,4e-06,3.2e-05,True,True,"frozenset({'UNSW', 'CIC'})",UNSW→CIC,0.25,0.2962
+DoS,ToN→CIC,False,30,0.9993,0.0002,0.9992,0.9994,0.9957,0.0109,0.0036,0.466,0.002831,0.02831,True,True,"frozenset({'ToN', 'CIC'})",ToN→CIC,0.1111,0.2003
+DoS,BoT→CIC,False,30,0.9992,0.0002,0.9991,0.9992,0.9957,0.0109,0.0034,0.4465,0.018406,0.202466,True,False,"frozenset({'BoT', 'CIC'})",BoT→CIC,0.1111,0.2929
+DoS,UNSW→ToN,False,30,0.895,0.0022,0.8943,0.8959,0.8729,0.0445,0.0222,0.7039,0.0,0.0,True,True,"frozenset({'UNSW', 'ToN'})",UNSW→ToN,0.25,0.1993
+DoS,CIC→ToN,False,30,0.8933,0.0022,0.8926,0.8942,0.8729,0.0445,0.0205,0.6497,0.000932,0.008388,True,True,"frozenset({'ToN', 'CIC'})",CIC→ToN,0.1111,0.2003
+DoS,BoT→ToN,True,30,0.8414,0.0035,0.8402,0.8426,0.8729,0.0445,-0.0315,-0.999,0.999844,1.0,False,False,"frozenset({'BoT', 'ToN'})",BoT→ToN,0.1111,0.1635
+DoS,UNSW→BoT,False,30,0.9463,0.0017,0.9457,0.9469,0.9266,0.0269,0.0197,1.0312,0.0,0.0,True,True,"frozenset({'UNSW', 'BoT'})",UNSW→BoT,0.1111,0.111
+DoS,CIC→BoT,False,30,0.9489,0.0019,0.9483,0.9497,0.9266,0.0269,0.0224,1.1717,0.0,0.0,True,True,"frozenset({'BoT', 'CIC'})",CIC→BoT,0.1111,0.2929
+DoS,ToN→BoT,True,30,0.9364,0.0019,0.9357,0.9371,0.9266,0.0269,0.0098,0.5143,0.095465,1.0,False,False,"frozenset({'ToN', 'BoT'})",ToN→BoT,0.1111,0.1635
+Reconnaissance,ToN→UNSW,False,30,0.9636,0.0024,0.9628,0.9645,0.9566,0.0092,0.007,1.0321,2e-06,1.4e-05,True,True,"frozenset({'ToN', 'UNSW'})",ToN→UNSW,0.3333,0.3599
+Reconnaissance,BoT→UNSW,False,30,0.9485,0.0024,0.9476,0.9493,0.9566,0.0092,-0.0082,-1.2086,0.999938,1.0,False,False,"frozenset({'BoT', 'UNSW'})",BoT→UNSW,0.1111,0.2268
+Reconnaissance,UNSW→ToN,False,30,0.9344,0.0033,0.9333,0.9357,0.8149,0.1498,0.1195,1.1277,0.0,0.0,True,True,"frozenset({'UNSW', 'ToN'})",UNSW→ToN,0.3333,0.3599
+Reconnaissance,BoT→ToN,True,30,0.8359,0.0064,0.8337,0.8382,0.8149,0.1498,0.021,0.1977,0.840802,1.0,False,False,"frozenset({'BoT', 'ToN'})",BoT→ToN,0.4286,0.7329
+Reconnaissance,UNSW→BoT,False,30,0.9646,0.0028,0.9636,0.9656,0.9108,0.0459,0.0538,1.6544,0.0,0.0,True,True,"frozenset({'UNSW', 'BoT'})",UNSW→BoT,0.1111,0.2268
+Reconnaissance,ToN→BoT,True,30,0.9258,0.0046,0.9241,0.9274,0.9108,0.0459,0.015,0.4592,0.078974,0.947688,False,False,"frozenset({'ToN', 'BoT'})",ToN→BoT,0.4286,0.7329

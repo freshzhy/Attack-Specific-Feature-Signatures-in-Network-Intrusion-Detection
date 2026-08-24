@@ -1,0 +1,19 @@
+Attack,Source→Target,Env. Match,SHAP-10-Direct F1,SHAP-10 F1,Δ(Direct−SHAP10),Cohen's d,p_adj (vs SHAP-10),Sig. (vs SHAP-10),Δ(Direct−Random),p_adj (vs Random),Sig. (vs Random)
+DoS,BoT→CIC,False,0.0,0.9992,-0.9992,-6687.0974,1.0,False,-0.9982,1.0,False
+DoS,ToN→CIC,False,0.0004,0.9993,-0.999,-926.9623,1.0,False,-0.9979,1.0,False
+DoS,ToN→BoT,True,0.0,0.9364,-0.9364,-715.103,1.0,False,-0.9081,1.0,False
+DoS,CIC→BoT,False,0.0378,0.9489,-0.9111,-53.3969,1.0,False,-0.8702,1.0,False
+DoS,CIC→ToN,False,0.0,0.8933,-0.8933,-562.6459,1.0,False,-0.8644,1.0,False
+DoS,ToN→UNSW,False,0.0003,0.8845,-0.8842,-215.6293,1.0,False,-0.8847,1.0,False
+DoS,BoT→UNSW,False,0.0003,0.8784,-0.878,-188.9116,1.0,False,-0.8846,1.0,False
+DoS,UNSW→ToN,False,0.0394,0.895,-0.8557,-24.4509,1.0,False,-0.825,1.0,False
+DoS,BoT→ToN,True,0.0,0.8414,-0.8414,-341.4485,1.0,False,-0.8644,1.0,False
+DoS,UNSW→CIC,True,0.2041,0.9999,-0.7958,-222.3137,1.0,False,-0.7941,1.0,False
+DoS,UNSW→BoT,False,0.1903,0.9463,-0.7559,-10.3279,1.0,False,-0.7177,1.0,False
+DoS,CIC→UNSW,True,0.3084,0.9091,-0.6007,-45.7066,1.0,False,-0.5766,1.0,False
+Reconnaissance,ToN→UNSW,False,0.0009,0.9636,-0.9627,-529.0638,1.0,False,-0.9524,1.0,False
+Reconnaissance,UNSW→BoT,False,0.0026,0.9646,-0.9619,-325.1439,1.0,False,-0.9083,1.0,False
+Reconnaissance,UNSW→ToN,False,0.0015,0.9344,-0.9329,-385.3275,1.0,False,-0.7471,1.0,False
+Reconnaissance,ToN→BoT,True,0.1171,0.9258,-0.8086,-93.5847,1.0,False,-0.7938,1.0,False
+Reconnaissance,BoT→UNSW,False,0.1879,0.9485,-0.7606,-24.4656,1.0,False,-0.7653,1.0,False
+Reconnaissance,BoT→ToN,True,0.1434,0.8359,-0.6924,-111.0594,1.0,False,-0.6052,1.0,False

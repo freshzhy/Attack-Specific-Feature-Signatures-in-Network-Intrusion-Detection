@@ -1,0 +1,14 @@
+# Exact versions used to produce the results reported in the paper
+# (see upload/README.md "Environment" section for the equivalent setup_env.sh workflow).
+# Minimum-compatible versions are also noted; newer patch releases of these
+# packages are generally expected to reproduce the same qualitative results,
+# but exact numeric reproduction was only verified against the pinned versions below.
+
+numpy==2.5.2
+pandas==3.0.5
+scikit-learn==1.9.0
+xgboost==3.4.1
+shap==0.52.0
+matplotlib==3.11.1
+seaborn==0.13.2
+scipy>=1.11        # used by analysis*_*.py for Wilcoxon/Mann-Whitney/Spearman tests; installed as a dependency of scikit-learn/pandas but pinned here for clarity

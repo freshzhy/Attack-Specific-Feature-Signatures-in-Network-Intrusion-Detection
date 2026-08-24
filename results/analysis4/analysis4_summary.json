@@ -1,0 +1,213 @@
+{
+  "n_pairs": 18,
+  "jsd_range_all": [
+    0.0751,
+    0.3827
+  ],
+  "jsd_range_topk": [
+    0.1111,
+    0.4651
+  ],
+  "spearman_results": [
+    {
+      "subset": "All",
+      "jsd_metric": "jsd_all_feats",
+      "n_pairs": 18,
+      "spearman_rho": -0.0912,
+      "p_value": 0.718802,
+      "significant": false,
+      "interpretation": "No clear monotonic relationship"
+    },
+    {
+      "subset": "DoS",
+      "jsd_metric": "jsd_all_feats",
+      "n_pairs": 12,
+      "spearman_rho": 0.0989,
+      "p_value": 0.759652,
+      "significant": false,
+      "interpretation": "No clear monotonic relationship"
+    },
+    {
+      "subset": "Reconnaissance",
+      "jsd_metric": "jsd_all_feats",
+      "n_pairs": 6,
+      "spearman_rho": 0.1195,
+      "p_value": 0.821569,
+      "significant": false,
+      "interpretation": "No clear monotonic relationship"
+    },
+    {
+      "subset": "All",
+      "jsd_metric": "jsd_topk_feats",
+      "n_pairs": 18,
+      "spearman_rho": -0.1827,
+      "p_value": 0.468161,
+      "significant": false,
+      "interpretation": "No clear monotonic relationship"
+    },
+    {
+      "subset": "DoS",
+      "jsd_metric": "jsd_topk_feats",
+      "n_pairs": 12,
+      "spearman_rho": -0.1399,
+      "p_value": 0.664633,
+      "significant": false,
+      "interpretation": "No clear monotonic relationship"
+    },
+    {
+      "subset": "Reconnaissance",
+      "jsd_metric": "jsd_topk_feats",
+      "n_pairs": 6,
+      "spearman_rho": 0.1429,
+      "p_value": 0.787172,
+      "significant": false,
+      "interpretation": "No clear monotonic relationship"
+    }
+  ],
+  "key_pairs": [
+    {
+      "pair": "UNSW→CIC",
+      "class": "DoS",
+      "jsd_topk": 0.209798,
+      "delta_f1": 0.0042,
+      "significant": true,
+      "env_same": true
+    },
+    {
+      "pair": "UNSW→ToN",
+      "class": "DoS",
+      "jsd_topk": 0.238373,
+      "delta_f1": 0.0222,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "UNSW→BoT",
+      "class": "DoS",
+      "jsd_topk": 0.21898,
+      "delta_f1": 0.0197,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "CIC→UNSW",
+      "class": "DoS",
+      "jsd_topk": 0.228233,
+      "delta_f1": 0.0183,
+      "significant": true,
+      "env_same": true
+    },
+    {
+      "pair": "CIC→ToN",
+      "class": "DoS",
+      "jsd_topk": 0.429245,
+      "delta_f1": 0.0205,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "CIC→BoT",
+      "class": "DoS",
+      "jsd_topk": 0.387918,
+      "delta_f1": 0.0224,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "ToN→UNSW",
+      "class": "DoS",
+      "jsd_topk": 0.253201,
+      "delta_f1": -0.0063,
+      "significant": false,
+      "env_same": false
+    },
+    {
+      "pair": "ToN→CIC",
+      "class": "DoS",
+      "jsd_topk": 0.429402,
+      "delta_f1": 0.0036,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "ToN→BoT",
+      "class": "DoS",
+      "jsd_topk": 0.2987,
+      "delta_f1": 0.0098,
+      "significant": false,
+      "env_same": true
+    },
+    {
+      "pair": "BoT→UNSW",
+      "class": "DoS",
+      "jsd_topk": 0.255621,
+      "delta_f1": -0.0124,
+      "significant": false,
+      "env_same": false
+    },
+    {
+      "pair": "BoT→CIC",
+      "class": "DoS",
+      "jsd_topk": 0.465135,
+      "delta_f1": 0.0034,
+      "significant": false,
+      "env_same": false
+    },
+    {
+      "pair": "BoT→ToN",
+      "class": "DoS",
+      "jsd_topk": 0.315049,
+      "delta_f1": -0.0315,
+      "significant": false,
+      "env_same": true
+    },
+    {
+      "pair": "UNSW→ToN",
+      "class": "Reconnaissance",
+      "jsd_topk": 0.295538,
+      "delta_f1": 0.1195,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "UNSW→BoT",
+      "class": "Reconnaissance",
+      "jsd_topk": 0.25219,
+      "delta_f1": 0.0538,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "ToN→UNSW",
+      "class": "Reconnaissance",
+      "jsd_topk": 0.315624,
+      "delta_f1": 0.007,
+      "significant": true,
+      "env_same": false
+    },
+    {
+      "pair": "ToN→BoT",
+      "class": "Reconnaissance",
+      "jsd_topk": 0.111129,
+      "delta_f1": 0.015,
+      "significant": false,
+      "env_same": true
+    },
+    {
+      "pair": "BoT→UNSW",
+      "class": "Reconnaissance",
+      "jsd_topk": 0.248011,
+      "delta_f1": -0.0082,
+      "significant": false,
+      "env_same": false
+    },
+    {
+      "pair": "BoT→ToN",
+      "class": "Reconnaissance",
+      "jsd_topk": 0.166125,
+      "delta_f1": 0.021,
+      "significant": false,
+      "env_same": true
+    }
+  ]
+}

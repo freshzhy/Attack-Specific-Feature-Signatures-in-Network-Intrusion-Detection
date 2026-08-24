@@ -1,0 +1,20 @@
+To quantify flow-level behavioral similarity between source and target attack
+populations, we compute the Jensen–Shannon divergence (JSD) between their
+feature-value distributions. For each of the 40 NetFlow features independently,
+we discretize the pooled source-and-target value range into 50 equal-width bins
+and construct empirical histograms for the source and target samples
+(up to 5,000 attack instances per dataset, drawn via stratified random sampling
+with a fixed seed for reproducibility). Each histogram is smoothed with an
+epsilon term (ε = 10⁻¹⁰) to avoid zero-probability bins, then
+normalized to a valid probability distribution. The per-feature JSD is computed
+as the squared value of the Jensen–Shannon distance (base-2 logarithm,
+bounded in [0, 1]), and the reported JSD is the unweighted mean across the 40
+features (or the source dataset's Top-10 SHAP features, for the restricted
+variant). This univariate, per-feature aggregation approach does not capture
+inter-feature correlations; a multivariate divergence measure (e.g.,
+kernel-based MMD) could provide a complementary perspective but was not
+pursued here, as the univariate JSD already provides a conservative, easily
+interpretable summary of distributional overlap. Source and target sample
+sizes are balanced by capping both at 5,000 instances; datasets with fewer
+than 5,000 attack instances of the relevant class contribute their full
+available sample.
